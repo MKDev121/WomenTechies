@@ -85,7 +85,7 @@ class LocationService {
     });
   }
   Future<void> sendLocationToBackend(double latitude, double longitude) async {
-    const String backendUrl = "http://172.17.213.215:5000/update_location"; // Replace with your backend URL
+    const String backendUrl = "https://mkdev121.pythonanywhere.com/update_location"; // Replace with your backend URL
 
     try {
       final response = await http.post(

@@ -1,51 +1,3 @@
-// import 'package:flutter/material.dart';
-
-// class UserLoginPage extends StatefulWidget {
-//   @override
-//   _UserLoginPageState createState() => _UserLoginPageState();
-// }
-
-// class _UserLoginPageState extends State<UserLoginPage> {
-//   final TextEditingController _nameController = TextEditingController();
-//   final TextEditingController _ageController = TextEditingController();
-
-//   void _submit() {
-//     String name = _nameController.text;
-//     String age = _ageController.text;
-//     print("Name: $name, Age: $age");
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(title: Text('User Login')),
-//       body: Padding(
-//         padding: EdgeInsets.all(16.0),
-//         child: Column(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: [
-//             TextField(
-//               controller: _nameController,
-//               decoration: InputDecoration(labelText: 'UserName'),
-//             ),
-//             SizedBox(height: 10),
-//             TextField(
-//               controller: _ageController,
-//               decoration: InputDecoration(labelText: 'Age'),
-//               keyboardType: TextInputType.number,
-//             ),
-//             SizedBox(height: 20),
-//             ElevatedButton(
-//               onPressed: _submit,
-//               child: Text('Submit'),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -65,7 +17,7 @@ class _UserLoginPageState extends State<UserLoginPage> {
   final TextEditingController _genderController = TextEditingController();
   LocationService user_loc= LocationService(); // Initialize location service
   // URL of your Flask backend
-  final String apiUrl = 'http://172.17.213.215:5000/add_user';  // Replace with your Flask server's IP if testing on a device
+  final String apiUrl = 'https://mkdev121.pythonanywhere.com/add_user';  // Replace with your Flask server's IP if testing on a device
 
   // Function to send data to the Flask backend
   Future<void> _submit() async {
